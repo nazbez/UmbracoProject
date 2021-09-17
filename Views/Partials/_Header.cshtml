@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@{ 
+    var navigationMenu = Model.AncestorOrSelf("home").Descendant("settings").Value<IEnumerable<Link>>("menuItemsPicker");
+    var logo = Model.AncestorOrSelf("home").Descendant("settings").Value<IPublishedContent>("imagePicker");
+}
+
+<header id="fh5co-header" role="banner">
+    <div class="container">
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+        <div id="fh5co-logo"><img src="@logo.Url()" alt="Free HTML5 Website Template"></div>
+        @if (navigationMenu != null)
+        {
+            <nav id="fh5co-main-nav" role="navigation">
+                <ul>
+                    @foreach(var item in navigationMenu)
+                     {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@item.Url">@item.Name</a>
+                        </li>
+                     }
+                </ul>
+            </nav>
+        }
+    </div>
+</header>

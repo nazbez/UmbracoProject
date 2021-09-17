@@ -1,0 +1,78 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@{
+
+    var logo = Model.AncestorOrSelf("home").Descendant("settings").Value<IPublishedContent>("image");
+    var titles = Model.AncestorOrSelf("home").Descendant("settings").Value<string[]>("titleList");
+    var links = Model.AncestorOrSelf("home").Descendant("settings").Value<IEnumerable<IPublishedElement>>("socialLinks");
+    var firstLinkList = Model.AncestorOrSelf("home").Descendant("settings").Value<IEnumerable<Link>>("firstLinkList");
+    var secondLinkList = Model.AncestorOrSelf("home").Descendant("settings").Value<IEnumerable<Link>>("secondLinkList");
+
+}
+
+<footer id="fh5co-footer" role="contentinfo" style="width:100%">
+        <div class="row">
+            <div class="container" style="margin-top:30px; margin-bottom:30px">
+                @foreach (var title in titles)
+                {
+                    <span style="color:black; margin-left:5px; font-size:25px">@title</span>
+                }
+                <hr/>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-bottom-padded-sm">
+                <div class="col-md-3 col-sm-12">
+                    <div class="fh5co-footer-widget">
+                        <img src="@logo.Url()" alt="footer logo" class="general-info__logo">
+                        <p>@Model.AncestorOrSelf("home").Descendant("settings").Value("generalInfo")</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-push-0 col-sm-12 col-sm-push-0">
+                    <div class="fh5co-footer-widget">
+                        <h3 style="margin-top:15px">@(Model.AncestorOrSelf("home").Descendant("settings").Value<string>("firstLinkListTitle"))</h3>
+                        <ul class="fh5co-footer-link">
+                            @foreach (var link in firstLinkList)
+                            {
+                                <li><a href="@link.Url">@link.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-push-0 col-sm-12 col-sm-push-0">
+                    <div class="fh5co-footer-widget">
+                        <h3 style="margin-top:15px">@(Model.AncestorOrSelf("home").Descendant("settings").Value<string>("secondLinkListTitle"))</h3>
+                        <ul class="fh5co-footer-link">
+                            @foreach (var link in secondLinkList)
+                            {
+                                <li><a href="@link.Url">@link.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-md-push-0 col-sm-12 col-sm-push-0">
+
+                    <div class="fh5co-footer-widget">
+                        <h3 style="margin-top:15px">@(Model.AncestorOrSelf("home").Descendant("settings").Value<string>("socialLinksTitle"))</h3>
+                        <ul class="fh5co-social">
+                            @foreach (var link in links)
+                            {
+                                <li class="message"><a href="@(link.Value<IEnumerable<Link>>("link").First().Url)"><i class="@(link.Value<string>("iconClass"))"></i></a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fh5co-copyright" align="center" style="font-size:13px">
+                        <p>@Model.AncestorOrSelf("home").Descendant("settings").Value("permission")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>
