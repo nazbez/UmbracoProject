@@ -29,6 +29,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>Menu Items Picker</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
 		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuItemsPicker { get; }
+
+		/// <summary>Sign In Items Picker</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.SignInItem> SignInItemsPicker { get; }
+
+		/// <summary>Sign In Menu Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		string SignInMenuTitle { get; }
 	}
 
 	/// <summary>Header Controls</summary>
@@ -81,5 +89,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>Static getter for Menu Items Picker</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
 		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> GetMenuItemsPicker(IHeaderControl that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(publishedValueFallback, "menuItemsPicker");
+
+		///<summary>
+		/// Sign In Items Picker: Enter items of the sign in menu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("signInItemsPicker")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.SignInItem> SignInItemsPicker => GetSignInItemsPicker(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Sign In Items Picker</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.SignInItem> GetSignInItemsPicker(IHeaderControl that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.SignInItem>>(publishedValueFallback, "signInItemsPicker");
+
+		///<summary>
+		/// Sign In Menu Title: Enter the title of sign in menu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("signInMenuTitle")]
+		public virtual string SignInMenuTitle => GetSignInMenuTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Sign In Menu Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		public static string GetSignInMenuTitle(IHeaderControl that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "signInMenuTitle");
 	}
 }

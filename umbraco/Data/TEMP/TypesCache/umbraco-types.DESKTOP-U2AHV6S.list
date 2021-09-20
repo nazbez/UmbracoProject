@@ -531,6 +531,7 @@ Umbraco.Cms.Web.BackOffice.Trees.TemplatesTreeController, Umbraco.Web.BackOffice
 Umbraco.Cms.Core.Models.PublishedContent.PublishedElementModel
 
 Umbraco.Cms.Web.Common.PublishedModels.IconLinkItem, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.SignInItem, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Cms.Core.Models.PublishedContent.PublishedContentModel
 
