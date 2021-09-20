@@ -528,3 +528,22 @@ Umbraco.Cms.Web.BackOffice.Trees.MemberTreeController, Umbraco.Web.BackOffice, V
 Umbraco.Cms.Web.BackOffice.Trees.MemberTypeTreeController, Umbraco.Web.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Cms.Web.BackOffice.Trees.TemplatesTreeController, Umbraco.Web.BackOffice, Version=9.0.0.0, Culture=neutral, PublicKeyToken=null
 
+Umbraco.Cms.Core.Models.PublishedContent.PublishedElementModel
+
+Umbraco.Cms.Web.Common.PublishedModels.IconLinkItem, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+
+Umbraco.Cms.Core.Models.PublishedContent.PublishedContentModel
+
+Umbraco.Cms.Web.Common.PublishedModels.Article, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Audio, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.File, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Folder, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.FooterControls, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.HeaderControl, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Home, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Image, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Member, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Settings, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.VectorGraphics, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.Cms.Web.Common.PublishedModels.Video, UmbracoProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+
