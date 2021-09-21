@@ -1,0 +1,53 @@
+﻿@model Settings;
+
+@{
+    var buttonList = Model.ButtonItemsList;
+}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 id="exampleModalLabel">@Model.FormTitle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom:10px" align="center">
+                    <span>@Model.SocialProfileTitle</span>
+                </div>
+                <div style="margin-bottom:10px" align="center">
+                    @foreach (var item in buttonList)
+                    {
+                        <a class="btn btn-primary" style="background-color: blue" href="#!" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="@item.SvgClass" viewBox="0 0 16 16">
+                                <path d="@item.PathSvg" />
+                            </svg>
+                            @item.SocialProfileName
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>
+                        </a>
+                    }
+                </div>
+                <div style="margin-bottom:10px; margin-top:20px" align="center">
+                    <span>@Model.EmailTitle</span>
+                </div>
+                <div align="center">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color:blue">@Model.ButtonName</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div align="center" style="margin-bottom:20px">
+                    <span style="font-size:small">@Model.FooterContent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
