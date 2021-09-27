@@ -9,16 +9,19 @@
 
 
     <ItemGroup>
+        <Compile Remove="NewFolder1\**" />
         <Compile Remove="umbraco\Data\**" />
         <Compile Remove="umbraco\logs\**" />
         <Compile Remove="umbraco\MediaCache\**" />
     </ItemGroup>
     <ItemGroup>
+        <EmbeddedResource Remove="NewFolder1\**" />
         <EmbeddedResource Remove="umbraco\Data\**" />
         <EmbeddedResource Remove="umbraco\logs\**" />
         <EmbeddedResource Remove="umbraco\MediaCache\**" />
     </ItemGroup>
     <ItemGroup>
+        <None Remove="NewFolder1\**" />
         <None Remove="umbraco\Data\**" />
         <None Remove="umbraco\logs\**" />
         <None Remove="umbraco\MediaCache\**" />
@@ -32,6 +35,7 @@
         </None>
     </ItemGroup>
     <ItemGroup>
+        <Content Remove="NewFolder1\**" />
         <Content Remove="umbraco\Data\**" />
         <Content Remove="umbraco\logs\**" />
         <Content Remove="umbraco\MediaCache\**" />

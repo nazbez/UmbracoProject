@@ -1,0 +1,20 @@
+﻿@model Home
+@{ 
+    var logos = Model.CompanyImages;
+}
+    <section id="cliens" class="cliens section-bg">
+
+        <div class="container" align="center">
+            <div class="container" align="center">
+                <h4>@Model.TrustedByTitle</h4>
+            </div>
+            <div class="row" data-aos="zoom-in" align="center" style=" display: flex; align-items: center; justify-content: center; flex-wrap: wrap; column-gap: 125px; row-gap: 25px;">
+                @foreach(var img in logos)
+                 {
+                    <div>
+                       <img src="@img.Url()" class="img-fluid" alt="">
+                    </div>
+                 }      
+            </div>
+        </div>
+    </section>

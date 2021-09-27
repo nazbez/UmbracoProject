@@ -1,0 +1,19 @@
+﻿@model Home
+
+<section id="hero" class="d-flex align-items-center" style="height:min-content">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h3>@Model.GoalsBlock.First().BlockTitle</h3>
+                <p>@Html.Raw(Model.GoalsBlock.First().BlockGeneralInfo)</p>
+                <div class="d-lg-flex">
+                    <a href="#" class="btn-get-started scrollto">@Model.GoalsBlock.First().BlockButtonName</a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                <img src="@Model.GoalsBlock.First().BlockImage.Url()" alt="">
+            </div>
+        </div>
+    </div>
+</section>

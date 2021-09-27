@@ -1,5 +1,4 @@
-﻿
-@inherits UmbracoViewPage
+﻿@inherits UmbracoViewPage
 @{
     Layout = null;
 }
@@ -47,24 +46,14 @@
 
 
 <body>
-
-
-    @await Html.PartialAsync("/Views/Partials/_ModalForm.cshtml", Model.Root().Descendant<Settings>())
-
     <!-- ======= Header ======= -->
-    @await Html.PartialAsync("/Views/Partials/_Header.cshtml", Model.Root().Descendant<Settings>())
-    <!-- ======= Hero Section ======= -->
+    @await Component.InvokeAsync("Header")
 
+    @RenderBody()
 
-    <main id="main">
-        @RenderBody()
-
-    </main>
     <!-- ======= Footer ======= -->
     @await Html.PartialAsync("/Views/Partials/_Footer.cshtml", Model.Root().Descendant<Settings>())
 
-    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
-    <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
@@ -80,7 +69,7 @@
     <!-- Template Main JS File -->
     <script src="/assets/js/main.js"></script>
 
-    @await Html.PartialAsync("/Views/Partials/_ModalForm.cshtml", Model.Root().Descendant<Settings>())
+    @await Html.PartialAsync("/Views/Partials/_ModalForm.cshtml", Model.Root().Descendant<ModalFormSettings>())
 </body>
 
 </html>

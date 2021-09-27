@@ -1,0 +1,19 @@
+﻿@model Home
+
+<section id="hero" class="d-flex align-items-center" style="height:min-content">
+
+    <div class="container" style="padding-bottom:0px; margin-bottom:0px; margin-top:0px">
+        <div class="row" style="padding-bottom:0px">
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-up" data-aos-delay="200" style="padding-bottom:0px">
+                <h3>@Model.ContactUsBlock.First().BlockTitle</h3>
+                <p>@Html.Raw(Model.ContactUsBlock.First().BlockGeneralInfo)</p>
+                <div class="d-lg-flex">
+                    <a href="#" class="btn-get-started scrollto">@Model.ContactUsBlock.First().BlockButtonName</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="zoom-in" data-aos-delay="200" style="padding-bottom:0px">
+                <img src="@Model.ContactUsBlock.First().BlockImage.Url()" alt="">
+            </div>
+        </div>
+    </div>
+</section>

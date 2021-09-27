@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Settings</summary>
 	[PublishedModel("settings")]
-	public partial class Settings : PublishedContentModel, IFooterControls, IHeaderControl, IModelFormContorls
+	public partial class Settings : PublishedContentModel, IFooterControls, IHeaderControl
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -144,47 +144,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
 		[ImplementPropertyType("signInMenuTitle")]
 		public virtual string SignInMenuTitle => global::Umbraco.Cms.Web.Common.PublishedModels.HeaderControl.GetSignInMenuTitle(this, _publishedValueFallback);
-
-		///<summary>
-		/// Button Items List: Enter the info about button items
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
-		[ImplementPropertyType("buttonItemsList")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.ButtonItem> ButtonItemsList => global::Umbraco.Cms.Web.Common.PublishedModels.ModelFormContorls.GetButtonItemsList(this, _publishedValueFallback);
-
-		///<summary>
-		/// Button Name: Enter the button name
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
-		[ImplementPropertyType("buttonName")]
-		public virtual string ButtonName => global::Umbraco.Cms.Web.Common.PublishedModels.ModelFormContorls.GetButtonName(this, _publishedValueFallback);
-
-		///<summary>
-		/// Email Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
-		[ImplementPropertyType("emailTitle")]
-		public virtual string EmailTitle => global::Umbraco.Cms.Web.Common.PublishedModels.ModelFormContorls.GetEmailTitle(this, _publishedValueFallback);
-
-		///<summary>
-		/// Footer Content
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
-		[ImplementPropertyType("footerContent")]
-		public virtual string FooterContent => global::Umbraco.Cms.Web.Common.PublishedModels.ModelFormContorls.GetFooterContent(this, _publishedValueFallback);
-
-		///<summary>
-		/// Form Title: Enter the form title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
-		[ImplementPropertyType("formTitle")]
-		public virtual string FormTitle => global::Umbraco.Cms.Web.Common.PublishedModels.ModelFormContorls.GetFormTitle(this, _publishedValueFallback);
-
-		///<summary>
-		/// Social Profile Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
-		[ImplementPropertyType("socialProfileTitle")]
-		public virtual string SocialProfileTitle => global::Umbraco.Cms.Web.Common.PublishedModels.ModelFormContorls.GetSocialProfileTitle(this, _publishedValueFallback);
 	}
 }

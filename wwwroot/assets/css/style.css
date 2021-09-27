@@ -30,14 +30,14 @@ h1, h2, h3, h4, h5, h6 {
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #37517e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #c3c6c7;
 }
 
 #preloader:before {
@@ -97,10 +97,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s;
 }
 
-.back-to-top i:hover {
-  background: #209dd8;
-  color: #fff;
-}
+    .back-to-top i:hover {
+        background: #c3c6c7;
+        color: #c3c6c7;
+    }
 
 /*--------------------------------------------------------------
 # Header
@@ -111,9 +111,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 0;
 }
 
-#header.header-scrolled, #header.header-inner-pages {
-  background: rgba(40, 58, 90, 0.9);
-}
+    #header.header-scrolled, #header.header-inner-pages {
+        background: #c3c6c7;
+    }
 
 #header .logo {
   font-size: 30px;
@@ -154,18 +154,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a {
-  display: block;
-  position: relative;
-  color: #fff;
-  transition: 0.3s;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  font-family: "Open Sans", sans-serif;
+    display: block;
+    position: relative;
+    color: darkblue;
+    transition: 0.3s;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #47b2e4;
+        color: #47b2e4;
 }
 
 .nav-menu .drop-down ul {
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
-  color: #fff;
+  color: white;
   border-radius: 50px;
   padding: 6px 25px 7px 25px;
   white-space: nowrap;
@@ -383,9 +383,9 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 80vh;
-  background: #37517e;
+    width: 100%;
+    height: 80vh;
+    background: #f3f5fa;
 }
 
 #hero .container {
@@ -397,14 +397,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: black;
 }
 
-#hero h2 {
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 50px;
-  font-size: 24px;
-}
+    #hero h2 {
+        color: black;
+        margin-bottom: 50px;
+        font-size: 24px;
+    }
 
 #hero .btn-get-started {
   font-family: "Jost", sans-serif;
@@ -443,9 +443,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 
-#hero .btn-watch-video:hover i {
-  color: #47b2e4;
-}
+    #hero .btn-watch-video:hover i {
+        color: #37517e;
+    }
 
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
@@ -576,8 +576,8 @@ section {
 /*--------------------------------------------------------------
 # Cliens
 --------------------------------------------------------------*/
-.cliens {
-  padding: 12px 0;
+/*.cliens {
+  padding: 0 0;
   text-align: center;
 }
 
@@ -598,7 +598,7 @@ section {
   .cliens img {
     max-width: 40%;
   }
-}
+}*/
 
 /*--------------------------------------------------------------
 # About Us
@@ -662,7 +662,10 @@ section {
 # Why Us
 --------------------------------------------------------------*/
 .why-us .content {
-  padding: 60px 100px 0 100px;
+    padding: 60px 100px 300px 375px;
+    margin-right:100px;
+    padding-right:100px;
+    border-left:700px;
 }
 
 .why-us .content h3 {
@@ -680,12 +683,14 @@ section {
 .why-us .content p {
   font-size: 15px;
   color: #848484;
+  padding-right:200px;
 }
 
 .why-us .img {
-  background-size: contain;
+  background-size:auto;
   background-repeat: no-repeat;
   background-position: center center;
+  padding-right: 400px;
 }
 
 .why-us .accordion-list {
@@ -1075,16 +1080,6 @@ section {
   font-weight: 500;
 }
 
-.team .member span::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #cbd6e9;
-  bottom: 0;
-  left: 0;
-}
 
 .team .member p {
   margin: 10px 0 0 0;
@@ -1654,17 +1649,17 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  font-size: 14px;
-  background: #37517e;
+    font-size: 14px;
+    background: #021a57;
 }
 
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: #f3f5fa;
-  text-align: center;
-  font-size: 15px;
-  color: #444444;
-}
+    #footer .footer-newsletter {
+        padding: 50px 0;
+        background: #021a57;
+        text-align: center;
+        font-size: 15px;
+        color: #444444;
+    }
 
 #footer .footer-newsletter h4 {
   font-size: 24px;
@@ -1713,7 +1708,7 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: #f3f5fa;
 }
 
 #footer .footer-top .footer-contact {

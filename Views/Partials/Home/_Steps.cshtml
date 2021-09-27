@@ -1,0 +1,43 @@
+﻿@model Home
+
+<section id="team" class="team section-bg" style="height:min-content">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>@Model.StepsBlockTitle</h2>
+            <p>@Html.Raw(Model.StepsBlockGeneralInfo)</p>
+        </div>
+
+        <div class="row">
+
+            @foreach (var item in Model.Blocks)
+            {
+                <div class="col-lg-6 mt-4 mt-lg-06">
+                    <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="pic"><img src="@item.BlockImage.Url()" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>@item.BlockTitle</h4>
+                            <p>@Html.Raw(item.BlockGeneralInfo)</p>
+                            <a href="">@item.BlockButtonName</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="mt-4" align="center">
+            <a href="#" style="font-family:Jost, sans-serif;
+               font-weight: 500;
+               font-size: 16px;
+               letter-spacing: 1px;
+               display: inline-block;
+               padding: 10px 28px 11px 28px;
+               border-radius: 50px;
+               transition: 0.5s;
+               margin: 10px 10px;
+               color: #fff;
+               background: #47b2e4">@Model.StepsBlockButtonName</a>
+        </div>
+    </div>
+</section>
+
+   

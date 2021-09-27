@@ -18,9 +18,18 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Is Visible</summary>
+	// Mixin Content Type with alias "isVisible"
+	/// <summary>Visibility Controls</summary>
+	public partial interface IIsVisible : IPublishedContent
+	{
+		/// <summary>Navigation Hide</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		bool NavigationHide { get; }
+	}
+
+	/// <summary>Visibility Controls</summary>
 	[PublishedModel("isVisible")]
-	public partial class IsVisible : PublishedContentModel
+	public partial class IsVisible : PublishedContentModel, IIsVisible
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -46,5 +55,16 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Navigation Hide: Tick this if you want to hide this element
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("navigationHide")]
+		public virtual bool NavigationHide => GetNavigationHide(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Navigation Hide</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		public static bool GetNavigationHide(IIsVisible that, IPublishedValueFallback publishedValueFallback) => that.Value<bool>(publishedValueFallback, "navigationHide");
 	}
 }

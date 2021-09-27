@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel
+	public partial class Home : PublishedContentModel, IContactUs, IGoals, IHero, IIsVisible, IMotivation, ISteps, ITrustedBy, IWhyChangeWhatWorks
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -46,5 +46,89 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Contact Us Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("contactUsBlock")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.Block> ContactUsBlock => global::Umbraco.Cms.Web.Common.PublishedModels.ContactUs.GetContactUsBlock(this, _publishedValueFallback);
+
+		///<summary>
+		/// Goals Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("goalsBlock")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.Block> GoalsBlock => global::Umbraco.Cms.Web.Common.PublishedModels.Goals.GetGoalsBlock(this, _publishedValueFallback);
+
+		///<summary>
+		/// Hero Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("heroBlock")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.Block> HeroBlock => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetHeroBlock(this, _publishedValueFallback);
+
+		///<summary>
+		/// Navigation Hide: Tick this if you want to hide this element
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("navigationHide")]
+		public virtual bool NavigationHide => global::Umbraco.Cms.Web.Common.PublishedModels.IsVisible.GetNavigationHide(this, _publishedValueFallback);
+
+		///<summary>
+		/// Motivation Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("motivationBlock")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.Block> MotivationBlock => global::Umbraco.Cms.Web.Common.PublishedModels.Motivation.GetMotivationBlock(this, _publishedValueFallback);
+
+		///<summary>
+		/// Blocks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("blocks")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.Block> Blocks => global::Umbraco.Cms.Web.Common.PublishedModels.Steps.GetBlocks(this, _publishedValueFallback);
+
+		///<summary>
+		/// Steps Block Button Name: Enter the button name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("stepsBlockButtonName")]
+		public virtual string StepsBlockButtonName => global::Umbraco.Cms.Web.Common.PublishedModels.Steps.GetStepsBlockButtonName(this, _publishedValueFallback);
+
+		///<summary>
+		/// Steps Block General Info
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("stepsBlockGeneralInfo")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString StepsBlockGeneralInfo => global::Umbraco.Cms.Web.Common.PublishedModels.Steps.GetStepsBlockGeneralInfo(this, _publishedValueFallback);
+
+		///<summary>
+		/// Steps Block Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("stepsBlockTitle")]
+		public virtual string StepsBlockTitle => global::Umbraco.Cms.Web.Common.PublishedModels.Steps.GetStepsBlockTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Company Images: Pick images
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("companyImages")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent> CompanyImages => global::Umbraco.Cms.Web.Common.PublishedModels.TrustedBy.GetCompanyImages(this, _publishedValueFallback);
+
+		///<summary>
+		/// Trusted By Title: Enter the title of block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("trustedByTitle")]
+		public virtual string TrustedByTitle => global::Umbraco.Cms.Web.Common.PublishedModels.TrustedBy.GetTrustedByTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Why Change What Works Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta003+b07f6519e7a1c890b534502982612ce6b3fea293")]
+		[ImplementPropertyType("whyChangeWhatWorksBlock")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.Block> WhyChangeWhatWorksBlock => global::Umbraco.Cms.Web.Common.PublishedModels.WhyChangeWhatWorks.GetWhyChangeWhatWorksBlock(this, _publishedValueFallback);
 	}
 }

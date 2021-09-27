@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Extensions;
 using Microsoft.Extensions.Hosting;
+using UmbracoProject.Services;
 
 namespace Umbraco9Project
 {
@@ -41,10 +42,12 @@ namespace Umbraco9Project
         {
 #pragma warning disable IDE0022 // Use expression body for methods
             services.AddUmbraco(_env, _config)
-                .AddBackOffice()             
+                .AddBackOffice() 
                 .AddWebsite()
                 .AddComposers()
                 .Build();
+
+            services.AddCustomServices();
 #pragma warning restore IDE0022 // Use expression body for methods
 
         }
